@@ -1,0 +1,12 @@
+body {
+    padding-top: 70px;
+}
+ #carouselExampleAutoplaying {
+     width: 60%;
+     margin: 0 auto;
+ }
+
+.carousel-inner img {
+    object-fit: cover;
+    height: 100px;
+}

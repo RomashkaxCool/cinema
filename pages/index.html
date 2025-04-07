@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KinoRoman</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-play-btn" viewBox="0 0 16 16">
+                    <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+                </svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav fs-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#movie">Movies</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Genres
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-white" href="#action">Action</a></li>
+                            <li><a class="dropdown-item text-white" href="#comedy">Comedy</a></li>
+                            <li><a class="dropdown-item text-white" href="#drama">Drama</a></li>
+                            <li><a class="dropdown-item text-white" href="#sci-fi">Sci-Fi</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- carousel -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/bet1.jpg" class="d-block w-100 img-fluid" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/bets2.jpg" class="d-block w-100 img-fluid" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- form -->
+    <div class="container mt-5">
+        <form id="genreForm" class="text-center">
+            <label for="genreSelect" class="form-label fs-4 text-white">Choose category:</label>
+            <select class="form-select w-50 mx-auto mb-3 text-white" id="genreSelect">
+                <option value="all">All films</option>
+                <option value="#action">Action</option>
+                <option value="#comedy">Comedy</option>
+                <option value="#drama">Drama</option>
+                <option value="#sci-fi">Sci-Fi</option>
+            </select>
+            <button type="submit" class="btn btn-info">Filter</button>
+        </form>
+    </div>
+
+    <!-- movies cards -->
+    <div class="container mt-4">
+        <h2 class="text-center mb-4 text-white" id="movie">Movies</h2>
+        <div class="genre-section mb-4">
+            <h3 class="text-white" id="action">Action:</h3>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
+                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
+                        <div class="card-body text-center">
+                            <a href="#" class="stretched-link text-decoration-none text-white">
+                                <p class="card-text">Форсаж</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
+                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
+                        <div class="card-body text-center">
+                            <a href="#" class="stretched-link text-decoration-none text-white">
+                                <p class="card-text">Форсаж</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
+                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
+                        <div class="card-body text-center">
+                            <a href="#" class="stretched-link text-decoration-none text-white">
+                                <p class="card-text">Форсаж</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
+                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
+                        <div class="card-body text-center">
+                            <a href="#" class="stretched-link text-decoration-none text-white">
+                                <p class="card-text">Форсаж</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
+                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
+                        <div class="card-body text-center">
+                            <a href="#" class="stretched-link text-decoration-none text-white">
+                                <p class="card-text">Форсаж</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
+                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
+                        <div class="card-body text-center">
+                            <a href="#" class="stretched-link text-decoration-none text-white">
+                                <p class="card-text">Форсаж</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
+                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
+                        <div class="card-body text-center">
+                            <a href="#" class="stretched-link text-decoration-none text-white">
+                                <p class="card-text">Форсаж</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
+                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
+                        <div class="card-body text-center">
+                            <a href="#" class="stretched-link text-decoration-none text-white">
+                                <p class="card-text">Форсаж</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="genre-section mb-4">
+            <h3 class="text-white" id="comedy">Comedy:</h3>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
+                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
+                        <div class="card-body text-center">
+                            <a href="#" class="stretched-link text-decoration-none text-white">
+                                <p class="card-text">Форсаж</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="genre-section mb-4">
+            <h3 class="text-white" id="drama">Drama:</h3>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
+                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
+                        <div class="card-body text-center">
+                            <a href="#" class="stretched-link text-decoration-none text-white">
+                                <p class="card-text">Форсаж</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="genre-section mb-4">
+        <h3 class="text-white" id="sci-fi">Sci-Fi:</h3>
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
+                    <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
+                    <div class="card-body text-center">
+                        <a href="#" class="stretched-link text-decoration-none text-white">
+                            <p class="card-text">Форсаж</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</main>
+<script src="../js/main.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
+</body>
+</html>
