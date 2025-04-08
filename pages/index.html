@@ -1,60 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KinoRoman</title>
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-<header>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-play-btn" viewBox="0 0 16 16">
-                    <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
-                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
-                </svg>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-                <ul class="navbar-nav fs-4">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#movie">Movies</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Genres
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item text-white" href="#action">Action</a></li>
-                            <li><a class="dropdown-item text-white" href="#comedy">Comedy</a></li>
-                            <li><a class="dropdown-item text-white" href="#drama">Drama</a></li>
-                            <li><a class="dropdown-item text-white" href="#sci-fi">Sci-Fi</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+<body class="bg-dark text-light"> <header>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top border-bottom border-secondary"> <div class="container-fluid">
+        <a class="navbar-brand" href="#home" data-bs-toggle="tooltip" data-bs-placement="bottom" title="На головну KinoRoman">
+            <i class="bi bi-film" style="font-size: 2rem;"></i>
+            KinoRoman
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav fs-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home"><i class="bi bi-house-door"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#movie"><i class="bi bi-camera-reels"></i> Movies</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-tag"></i> Genres
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#action">Action</a></li>
+                        <li><a class="dropdown-item" href="#comedy">Comedy</a></li>
+                        <li><a class="dropdown-item" href="#drama">Drama</a></li>
+                        <li><a class="dropdown-item" href="#sci-fi">Sci-Fi</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
+        <button class="btn btn-outline-info ms-lg-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <i class="bi bi-box-arrow-in-right"></i> Увійти
+        </button>
+    </div>
     </nav>
 </header>
 
-<main>
-    <!-- carousel -->
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<main class="container-fluid p-0">
+
+    <div id="home" class="container-fluid bg-secondary text-white p-5 mb-4 text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Вітаємо на KinoRoman!</h1>
+            <p class="col-lg-8 mx-auto fs-4">
+                Найкраща колекція фільмів усіх жанрів. Дивіться трейлери, читайте описи та обирайте, що подивитися сьогодні!
+            </p>
+            <div class="progress mt-4 mx-auto bg-dark" style="height: 25px; max-width: 500px;"> <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" aria-label="Приклад прогресу" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">Заповненість сайту 65%</div>
+            </div>
+            <a href="#movie" class="btn btn-info btn-lg mt-4"><i class="bi bi-film"></i> Перейти до фільмів</a>
+            <button type="button" class="btn btn-outline-light btn-lg mt-4" data-bs-toggle="popover" title="Спеціальна пропозиція!" data-bs-content="Підпишіться на нашу розсилку та отримайте знижку!">
+                <i class="bi bi-info-circle"></i> Дізнатись більше
+            </button>
+        </div>
+    </div>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../img/bet1.jpg" class="d-block w-100 img-fluid" alt="...">
+                <img src="../img/bet1.jpg" class="d-block w-100" alt="Промо 1">
             </div>
             <div class="carousel-item">
-                <img src="../img/bets2.jpg" class="d-block w-100 img-fluid" alt="...">
+                <img src="../img/bets2.jpg" class="d-block w-100" alt="Промо 2">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -66,159 +84,326 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <!-- form -->
-    <div class="container mt-5">
-        <form id="genreForm" class="text-center">
-            <label for="genreSelect" class="form-label fs-4 text-white">Choose category:</label>
-            <select class="form-select w-50 mx-auto mb-3 text-white" id="genreSelect">
-                <option value="all">All films</option>
-                <option value="#action">Action</option>
-                <option value="#comedy">Comedy</option>
-                <option value="#drama">Drama</option>
-                <option value="#sci-fi">Sci-Fi</option>
-            </select>
-            <button type="submit" class="btn btn-info">Filter</button>
-        </form>
-    </div>
 
-    <!-- movies cards -->
-    <div class="container mt-4">
-        <h2 class="text-center mb-4 text-white" id="movie">Movies</h2>
-        <div class="genre-section mb-4">
-            <h3 class="text-white" id="action">Action:</h3>
-            <div class="row g-4 justify-content-center">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
-                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
-                        <div class="card-body text-center">
-                            <a href="#" class="stretched-link text-decoration-none text-white">
-                                <p class="card-text">Форсаж</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
-                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
-                        <div class="card-body text-center">
-                            <a href="#" class="stretched-link text-decoration-none text-white">
-                                <p class="card-text">Форсаж</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
-                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
-                        <div class="card-body text-center">
-                            <a href="#" class="stretched-link text-decoration-none text-white">
-                                <p class="card-text">Форсаж</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
-                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
-                        <div class="card-body text-center">
-                            <a href="#" class="stretched-link text-decoration-none text-white">
-                                <p class="card-text">Форсаж</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
-                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
-                        <div class="card-body text-center">
-                            <a href="#" class="stretched-link text-decoration-none text-white">
-                                <p class="card-text">Форсаж</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
-                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
-                        <div class="card-body text-center">
-                            <a href="#" class="stretched-link text-decoration-none text-white">
-                                <p class="card-text">Форсаж</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
-                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
-                        <div class="card-body text-center">
-                            <a href="#" class="stretched-link text-decoration-none text-white">
-                                <p class="card-text">Форсаж</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
-                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
-                        <div class="card-body text-center">
-                            <a href="#" class="stretched-link text-decoration-none text-white">
-                                <p class="card-text">Форсаж</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <div class="container">
 
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 col-lg-6">
+                <form id="genreForm" class="text-center">
+                    <div class="mb-3">
+                        <label for="genreSelect" class="form-label fs-4">Оберіть категорію:</label>
+                        <select class="form-select form-select-lg bg-dark text-light border-secondary" id="genreSelect">
+                            <option value="all" selected>Всі фільми</option>
+                            <option value="action">Бойовик</option>
+                            <option value="comedy">Комедія</option>
+                            <option value="drama">Драма</option>
+                            <option value="sci-fi">Наукова фантастика</option>
+                        </select>
+                    </div>
+                    <div class="d-grid gap-2 d-sm-block">
+                        <button type="submit" class="btn btn-info btn-lg"><i class="bi bi-filter"></i> Фільтрувати</button>
+                        <button type="reset" class="btn btn-secondary btn-lg" onclick="$('.genre-section').slideDown(); $('#genreSelect').val('all');">Скинути</button>
+                    </div>
+                </form>
             </div>
         </div>
 
-        <div class="genre-section mb-4">
-            <h3 class="text-white" id="comedy">Comedy:</h3>
-            <div class="row g-4 justify-content-center">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
-                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
-                        <div class="card-body text-center">
-                            <a href="#" class="stretched-link text-decoration-none text-white">
-                                <p class="card-text">Форсаж</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="genre-section mb-4">
-            <h3 class="text-white" id="drama">Drama:</h3>
-            <div class="row g-4 justify-content-center">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
-                        <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
-                        <div class="card-body text-center">
-                            <a href="#" class="stretched-link text-decoration-none text-white">
-                                <p class="card-text">Форсаж</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><div class="genre-section mb-4">
-        <h3 class="text-white" id="sci-fi">Sci-Fi:</h3>
-        <div class="row g-4 justify-content-center">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <div class="card bg-dark text-white h-100 w-75 mx-auto p-2">
-                    <img src="../img/fast1.jpg" class="card-img-top img-fluid" alt="Форсаж">
-                    <div class="card-body text-center">
-                        <a href="#" class="stretched-link text-decoration-none text-white">
-                            <p class="card-text">Форсаж</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <div id="movie">
+            <h2 class="text-center mb-4 border-bottom border-secondary pb-2">Фільми</h2>
 
+            <div class="genre-section mb-5" data-genre="action">
+                <h3 class="mb-3" id="action" data-bs-toggle="popover" data-bs-trigger="hover" title="Бойовики" data-bs-content="Найдинамічніші фільми!">
+                    <i class="bi bi-lightning-charge"></i> Бойовик:
+                </h3>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/fast1.jpg" class="card-img-top" alt="Форсаж 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Форсаж</h5>
+                                <p class="card-text small flex-grow-1">Браян О'Коннер, поліцейський під прикриттям, впроваджується в банду Домініка Торетто.</p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Форсаж" data-img="../img/fast1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/fast2.jpg" class="card-img-top" alt="Подвійний форсаж">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Подвійний форсаж</h5>
+                                <p class="card-text small flex-grow-1">Браян та його друг Роман Пірс працюють під прикриттям, щоб зловити наркобарона.</p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Подвійний форсаж" data-img="../img/fast2.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/fast3.jpg" class="card-img-top" alt="Потрійний форсаж: Токійський дрифт">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Потрійний форсаж: Токійський дрифт</h5>
+                                <p class="card-text small flex-grow-1">Шон Босвелл переїжджає до Токіо і поринає у світ дрифтових перегонів.</p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Потрійний форсаж: Токійський дрифт" data-img="../img/fast3.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/fast4.jpg" class="card-img-top" alt="Форсаж 4">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Форсаж 4</h5>
+                                <p class="card-text small flex-grow-1">Домінік Торетто та Браян О'Коннер знову об'єднуються проти спільного ворога.</p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Форсаж 4" data-img="../img/fast4.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="genre-section mb-5" data-genre="comedy">
+                <h3 class="mb-3" id="comedy"><i class="bi bi-emoji-laughing"></i> Комедія:</h3>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/batman.jpg" class="card-img-top" alt="Комедія 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Бетмен</h5>
+                                <p class="card-text small flex-grow-1">Весела комедія про бетмена</p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Весела Комедія" data-img="../img/comedy1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/potter1.jpg" class="card-img-top" alt="Комедія 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Гаррі Поттер(переозвучка)</h5>
+                                <p class="card-text small flex-grow-1">Неповторний оригінал культового фільму про хлопчика який вижив</p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Весела Комедія" data-img="../img/comedy1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/deadpool.jpg" class="card-img-top" alt="Комедія 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Дедпул та Росомаха</h5>
+                                <p class="card-text small flex-grow-1">Продовження історії про безстрашного, але страшенно балакучого супергероя, який звик битися з поганими хлопцями.</p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Весела Комедія" data-img="../img/comedy1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/jackson.jpg" class="card-img-top" alt="Комедія 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Бойовик Джексон</h5>
+                                <p class="card-text small flex-grow-1">Віші — місцевий злодій, якому подобається бити людей, щоб виконати свою роботу, але, незважаючи на це, він добросерда людина. </p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Весела Комедія" data-img="../img/comedy1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="genre-section mb-5" data-genre="drama">
+                <h3 class="mb-3" id="drama"><i class="bi bi-heartbreak"></i> Драма:</h3>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/tattoonheart.jpg" class="card-img-top" alt="Драма 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Тату на серці</h5>
+                                <p class="card-text small flex-grow-1">Шоу Ландон закохалася в Рула Арчера з того моменту, як побачила його. Рул, запальний бунтар і тату-майстер. </p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Глибока Драма" data-img="../img/drama1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/scherif.jpg" class="card-img-top" alt="Драма 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Шериф</h5>
+                                <p class="card-text small flex-grow-1">Назрі, співробітник поліції з відділу боротьби з наркотиками, вважає, що проблема наркосиндикату Тоні Іфріта «сіабу» стає все більш поширеною.</p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Глибока Драма" data-img="../img/drama1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/passanger.jpg" class="card-img-top" alt="Драма 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Пасажир</h5>
+                                <p class="card-text small flex-grow-1">Замкнутий і сором'язливий хлопець Бредлі привчив себе триматися подалі від неприємностей у занедбаному ресторані швидкого харчування, де він працює.</p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Глибока Драма" data-img="../img/drama1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/killerskiss.jpg" class="card-img-top" alt="Драма 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Поцілунок вбивці</h5>
+                                <p class="card-text small flex-grow-1">Після поразки на рингу у важливому офіційному матчі, Дейві Гордон захищає танцівницю Глорію, яку переслідує її бос Вінсент Рапалло.</p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Глибока Драма" data-img="../img/drama1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="genre-section mb-5" data-genre="sci-fi">
+                <h3 class="mb-3" id="sci-fi"><i class="bi bi-robot"></i> Наукова фантастика:</h3>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/boomsun.jpg" class="card-img-top" alt="Sci-Fi 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Підірване сонце</h5>
+                                <p class="card-text small flex-grow-1">Світ із захопленням спостерігає за тим, як Roebling Clipper запускають у космос. </p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Космічна Одіссея" data-img="../img/scifi1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/rubicon.jpg" class="card-img-top" alt="Sci-Fi 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Рубікон</h5>
+                                <p class="card-text small flex-grow-1">З настанням 2056 року рівень забруднення навколишнього світу перевищив усі допустимі норми, а житло з нормальною вентиляцією тепер можуть дозволити собі виключно заможні люди.</p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Космічна Одіссея" data-img="../img/scifi1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/rig.jpg" class="card-img-top" alt="Sci-Fi 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Бурова</h5>
+                                <p class="card-text small flex-grow-1">Коли надворі вирує ураган, невелика, але досвідчена команда нафтової бурової вишки влаштовується на місці, щоб перечекати шторм. </p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Космічна Одіссея" data-img="../img/scifi1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card bg-dark text-white h-100 border border-secondary">
+                            <img src="../img/firequake.jpg" class="card-img-top" alt="Sci-Fi 1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-center">Виверження</h5>
+                                <p class="card-text small flex-grow-1">Компанія Promethean Kinetics створила «Геліос» - революційно чисте вугільне джерело енергії, настільки потужне, що може конкурувати з силою Сонця і вирішити енергетичну кризу.</p>
+                                <button type="button" class="btn btn-outline-info mt-auto w-100" data-bs-toggle="modal" data-bs-target="#movieDetailModal" data-title="Космічна Одіссея" data-img="../img/scifi1.jpg">
+                                    <i class="bi bi-info-circle"></i> Детальніше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> </div> </main>
+
+<div class="modal fade" id="movieDetailModal" tabindex="-1" aria-labelledby="movieDetailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light border border-secondary">
+            <div class="modal-header border-secondary"> <h5 class="modal-title" id="movieDetailModalLabel">Назва фільму</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5">
+                        <img id="modalMovieImage" src="" class="img-fluid rounded mb-3" alt="Постер фільму">
+                    </div>
+                    <div class="col-md-7">
+                        <p><strong>Опис:</strong></p>
+                        <p id="modalMovieDescription">Тут буде детальний опис фільму. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p><strong>Жанр:</strong> <span id="modalMovieGenre">Бойовик</span></p>
+                        <p><strong>Рейтинг:</strong> <span id="modalMovieRating">8.5/10</span> <i class="bi bi-star-fill text-warning"></i></p>
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="button" class="btn btn-success"><i class="bi bi-play-circle"></i> Дивитись трейлер</button>
+                            <button type="button" class="btn btn-primary"><i class="bi bi-heart"></i> Додати до улюблених</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-secondary"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+            </div>
+        </div>
     </div>
-</main>
-<script src="../js/main.js"></script>
+</div>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-light border border-secondary">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" id="loginModalLabel">Вхід в акаунт</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control bg-dark text-light border-secondary" id="loginEmail" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Пароль</label>
+                        <input type="password" class="form-control bg-dark text-light border-secondary" id="loginPassword">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Запам'ятати мене</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer justify-content-between border-secondary">
+                <button type="button" class="btn btn-link text-info-emphasis">Забули пароль?</button>
+                <div>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Скасувати</button>
+                    <button type="button" class="btn btn-info"><i class="bi bi-box-arrow-in-right"></i> Увійти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bg-dark text-white text-center p-4 mt-5 border-top border-secondary"> <p>&copy; 2025 KinoRoman. Всі права захищено.</p>
+    <p>
+        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-2"><i class="bi bi-twitter-x"></i></a> <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+    </p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/main.js"></script>
+
 </body>
 </html>
